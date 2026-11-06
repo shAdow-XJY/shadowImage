@@ -1,0 +1,74 @@
+[
+  {
+    "id": "01-game-screenshot",
+    "category": "game-screenshot",
+    "source": "public/_xjy/assets/00706a4798deeed246df01ff133e7bfbca3c40962cb17490e6032a8d647e9ef2.jpg",
+    "sha256": "00706a4798deeed246df01ff133e7bfbca3c40962cb17490e6032a8d647e9ef2"
+  },
+  {
+    "id": "02-text-card",
+    "category": "text-card",
+    "source": "public/_xjy/assets/007fb6ff391ca5df16e584cfe7690567cad5e498cf9c0ce3b3456d4d7782091f.webp",
+    "sha256": "007fb6ff391ca5df16e584cfe7690567cad5e498cf9c0ce3b3456d4d7782091f"
+  },
+  {
+    "id": "03-line-art",
+    "category": "line-art",
+    "source": "public/_xjy/assets/0eef15154ef8f3b1d3fdbfbc54f1e8effef7227a6a0f4dc724f1df41f704d2df.jpg",
+    "sha256": "0eef15154ef8f3b1d3fdbfbc54f1e8effef7227a6a0f4dc724f1df41f704d2df"
+  },
+  {
+    "id": "04-transparent-interface",
+    "category": "transparent-interface",
+    "source": "public/_xjy/assets/1294b323a9e224b4330bdd6960e955150e299a6ef20a61931a743a8718b9b982.png",
+    "sha256": "1294b323a9e224b4330bdd6960e955150e299a6ef20a61931a743a8718b9b982"
+  },
+  {
+    "id": "05-illustration",
+    "category": "illustration",
+    "source": "public/_xjy/assets/12d2bb2e8a0c83b9228b80974b39fdad7ebdd5b0819f43716b78872047236b9d.png",
+    "sha256": "12d2bb2e8a0c83b9228b80974b39fdad7ebdd5b0819f43716b78872047236b9d"
+  },
+  {
+    "id": "06-night-sky",
+    "category": "night-sky",
+    "source": "public/_xjy/assets/149521d4c7152dd93c42fbe1ed96ee808db449893e07224395e086474af69b77.jpg",
+    "sha256": "149521d4c7152dd93c42fbe1ed96ee808db449893e07224395e086474af69b77"
+  },
+  {
+    "id": "07-library-photo",
+    "category": "library-photo",
+    "source": "public/_xjy/assets/20650118261743da0bda5d9558d08e4dbb4bd8dc03d01e2f8bf8e2e08563a2bd.jpg",
+    "sha256": "20650118261743da0bda5d9558d08e4dbb4bd8dc03d01e2f8bf8e2e08563a2bd"
+  },
+  {
+    "id": "08-portrait-photo",
+    "category": "portrait-photo",
+    "source": "public/_xjy/assets/27ddfb69a63e404baeb6b558b18855b6b0a422a3ace5639072fa57ea34b9fc85.jpg",
+    "sha256": "27ddfb69a63e404baeb6b558b18855b6b0a422a3ace5639072fa57ea34b9fc85"
+  },
+  {
+    "id": "09-landscape-photo",
+    "category": "landscape-photo",
+    "source": "public/_xjy/assets/2a97390bb6846996f54db7594cbea88c101ac81baddd3cb808d2a5a4a1830bb3.jpg",
+    "sha256": "2a97390bb6846996f54db7594cbea88c101ac81baddd3cb808d2a5a4a1830bb3"
+  },
+  {
+    "id": "10-transparent-board",
+    "category": "transparent-board",
+    "source": "public/_xjy/assets/2e52bf8ca3a9a85128ca68ff3ac60f2a55f92b69b844aed3348862b2e7a6fedc.png",
+    "sha256": "2e52bf8ca3a9a85128ca68ff3ac60f2a55f92b69b844aed3348862b2e7a6fedc"
+  },
+  {
+    "id": "11-transparent-icons",
+    "category": "transparent-icons",
+    "source": "public/_xjy/assets/335106c2a656b05fd78746a33da8615753c6193eb78b31075e684218047220d8.webp",
+    "sha256": "335106c2a656b05fd78746a33da8615753c6193eb78b31075e684218047220d8"
+  },
+  {
+    "id": "12-comic",
+    "category": "comic",
+    "source": "public/_xjy/assets/462fd3ccf85b59c04f725475aea9a7b1783203c768177aca88dc7b6097c069cd.webp",
+    "sha256": "462fd3ccf85b59c04f725475aea9a7b1783203c768177aca88dc7b6097c069cd"
+  }
+]

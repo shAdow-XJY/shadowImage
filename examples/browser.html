@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ShadowImage · Browser example</title>
+<style>body{font:16px system-ui;max-width:850px;margin:40px auto;padding:0 20px;background:#111722;color:#e6edf5}canvas{display:block;max-width:100%;background:#202d40}button{padding:10px 16px;margin:12px 8px 12px 0}pre{white-space:pre-wrap}p{line-height:1.7}</style>
+<h1>ShadowImage</h1><p>单个自定义资源，先显示全图轮廓，再补充细节。请通过 HTTP 服务打开本页。静态服务器发送很快时，多个阶段会合并展示；可在浏览器开发者工具中限制网络速率。</p>
+<button id="start">加载 / 重新加载</button><button id="stop">停止</button><canvas id="image" width="480" height="300"></canvas><pre id="status"></pre>
+<script type="module">
+import {ShadowImagePlayer} from './dist/index.js';
+const status=document.querySelector('#status');
+const player=new ShadowImagePlayer({canvas:document.querySelector('#image'),url:'./sample.shp',
+  onProgress(e){if(e.stage==='frame')status.textContent=`${e.width} × ${e.height} · ${e.bytes} bytes · ${Math.round(e.elapsedMs)} ms${e.final?' · final':''}`;},
+  onError(e){status.textContent=e.message;}});
+document.querySelector('#start').onclick=()=>player.start().catch(()=>{});
+document.querySelector('#stop').onclick=()=>player.stop();
+player.start().catch(()=>{});
+</script></html>

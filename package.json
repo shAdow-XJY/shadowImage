@@ -1,0 +1,61 @@
+{
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js experiments/codec.test.js",
+    "demo": "node demo/progressive-server.mjs",
+    "build": "node scripts/build.mjs",
+    "corpus": "node scripts/corpus.mjs",
+    "encode": "node scripts/encode.mjs",
+    "demo:legacy": "node demo/server.mjs",
+    "test:browser": "node scripts/browser-test.mjs",
+    "test:browser:corpus": "node scripts/browser-corpus.mjs",
+    "prepack": "npm run build",
+    "report": "node scripts/report.mjs",
+    "test:cold": "node scripts/cold-start.mjs",
+    "demo:prepare": "node scripts/sample.mjs",
+    "release": "node scripts/release.mjs",
+    "test:package": "node test/package-smoke.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.55.1",
+    "esbuild": "^0.28.2",
+    "fflate": "0.8.3",
+    "sharp": "^0.35.5"
+  },
+  "name": "shadow-image",
+  "version": "0.2.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./encoder": {
+      "types": "./dist/encoder.d.ts",
+      "import": "./dist/encoder.js"
+    },
+    "./worker": "./dist/player/worker.js"
+  },
+  "files": [
+    "dist",
+    "specs",
+    "README.md",
+    "LICENSE",
+    "docs",
+    "reports/VALIDATION.md"
+  ],
+  "description": "Lightweight custom progressive image streaming with pure JavaScript decoding",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shAdow-XJY/shadowImage.git"
+  },
+  "homepage": "https://github.com/shAdow-XJY/shadowImage#readme",
+  "bugs": {
+    "url": "https://github.com/shAdow-XJY/shadowImage/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "types": "./dist/index.d.ts"
+}

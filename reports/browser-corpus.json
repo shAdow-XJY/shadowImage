@@ -1,0 +1,602 @@
+[
+  {
+    "id": "01-game-screenshot",
+    "execution": "main",
+    "hash": "0cb94500b7dc00991c6a945e0ba6d7b12611a40fc82e2af69fc4af71a65212e8",
+    "expected": "0cb94500b7dc00991c6a945e0ba6d7b12611a40fc82e2af69fc4af71a65212e8",
+    "result": {
+      "status": "complete",
+      "bytes": 520616,
+      "elapsedMs": 730.8000000119209,
+      "maxSliceMs": 8.299999952316284
+    },
+    "frames": 7,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1774,
+      "width": 24,
+      "height": 15,
+      "elapsedMs": 8.800000011920929
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "01-game-screenshot",
+    "execution": "auto",
+    "hash": "0cb94500b7dc00991c6a945e0ba6d7b12611a40fc82e2af69fc4af71a65212e8",
+    "expected": "0cb94500b7dc00991c6a945e0ba6d7b12611a40fc82e2af69fc4af71a65212e8",
+    "result": {
+      "status": "complete",
+      "bytes": 520616,
+      "elapsedMs": 662.5,
+      "maxSliceMs": 8.399999976158142
+    },
+    "frames": 7,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1774,
+      "width": 24,
+      "height": 15,
+      "elapsedMs": 12.299999952316284
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "02-text-card",
+    "execution": "main",
+    "hash": "8166e952fdb2976a63b6b6d6a8f02bcb05929eaf2526d12dc2b7bd9693dd7ee9",
+    "expected": "8166e952fdb2976a63b6b6d6a8f02bcb05929eaf2526d12dc2b7bd9693dd7ee9",
+    "result": {
+      "status": "complete",
+      "bytes": 181801,
+      "elapsedMs": 587.1999999880791,
+      "maxSliceMs": 8.099999964237213
+    },
+    "frames": 7,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1620,
+      "width": 24,
+      "height": 13,
+      "elapsedMs": 10
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "02-text-card",
+    "execution": "auto",
+    "hash": "8166e952fdb2976a63b6b6d6a8f02bcb05929eaf2526d12dc2b7bd9693dd7ee9",
+    "expected": "8166e952fdb2976a63b6b6d6a8f02bcb05929eaf2526d12dc2b7bd9693dd7ee9",
+    "result": {
+      "status": "complete",
+      "bytes": 181801,
+      "elapsedMs": 503.5999999642372,
+      "maxSliceMs": 8.100000023841858
+    },
+    "frames": 6,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1620,
+      "width": 24,
+      "height": 13,
+      "elapsedMs": 10.899999976158142
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "03-line-art",
+    "execution": "main",
+    "hash": "37f18eefc29c3e38f6e3ced9870ac330e2c07bc8ac649636e41bfd15aff042ab",
+    "expected": "37f18eefc29c3e38f6e3ced9870ac330e2c07bc8ac649636e41bfd15aff042ab",
+    "result": {
+      "status": "complete",
+      "bytes": 287282,
+      "elapsedMs": 522.1999999880791,
+      "maxSliceMs": 8.099999964237213
+    },
+    "frames": 6,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1570,
+      "width": 13,
+      "height": 23,
+      "elapsedMs": 5
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "03-line-art",
+    "execution": "auto",
+    "hash": "37f18eefc29c3e38f6e3ced9870ac330e2c07bc8ac649636e41bfd15aff042ab",
+    "expected": "37f18eefc29c3e38f6e3ced9870ac330e2c07bc8ac649636e41bfd15aff042ab",
+    "result": {
+      "status": "complete",
+      "bytes": 287282,
+      "elapsedMs": 459,
+      "maxSliceMs": 8.100000023841858
+    },
+    "frames": 6,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1570,
+      "width": 13,
+      "height": 23,
+      "elapsedMs": 10
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "04-transparent-interface",
+    "execution": "main",
+    "hash": "b41fa857fd05070a835298f9463f8b4b1583c50561c32570aa6a4c2034e97ee3",
+    "expected": "b41fa857fd05070a835298f9463f8b4b1583c50561c32570aa6a4c2034e97ee3",
+    "result": {
+      "status": "complete",
+      "bytes": 432873,
+      "elapsedMs": 811.9000000357628,
+      "maxSliceMs": 8.399999976158142
+    },
+    "frames": 7,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2176,
+      "width": 20,
+      "height": 24,
+      "elapsedMs": 4.600000023841858
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "04-transparent-interface",
+    "execution": "auto",
+    "hash": "b41fa857fd05070a835298f9463f8b4b1583c50561c32570aa6a4c2034e97ee3",
+    "expected": "b41fa857fd05070a835298f9463f8b4b1583c50561c32570aa6a4c2034e97ee3",
+    "result": {
+      "status": "complete",
+      "bytes": 432873,
+      "elapsedMs": 838,
+      "maxSliceMs": 9.100000023841858
+    },
+    "frames": 8,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2176,
+      "width": 20,
+      "height": 24,
+      "elapsedMs": 12.699999988079071
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "05-illustration",
+    "execution": "main",
+    "hash": "41b18532ec6f11455f78afdf1dde5add5933689001912ab494b51984695179be",
+    "expected": "41b18532ec6f11455f78afdf1dde5add5933689001912ab494b51984695179be",
+    "result": {
+      "status": "complete",
+      "bytes": 378836,
+      "elapsedMs": 212.29999995231628,
+      "maxSliceMs": 8.300000011920929
+    },
+    "frames": 4,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2554,
+      "width": 30,
+      "height": 17,
+      "elapsedMs": 2.899999976158142
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "05-illustration",
+    "execution": "auto",
+    "hash": "41b18532ec6f11455f78afdf1dde5add5933689001912ab494b51984695179be",
+    "expected": "41b18532ec6f11455f78afdf1dde5add5933689001912ab494b51984695179be",
+    "result": {
+      "status": "complete",
+      "bytes": 378836,
+      "elapsedMs": 200.9000000357628,
+      "maxSliceMs": 8.300000011920929
+    },
+    "frames": 4,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2554,
+      "width": 30,
+      "height": 17,
+      "elapsedMs": 9.400000035762787
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "06-night-sky",
+    "execution": "main",
+    "hash": "012aba4a1115e77fe193f414645de65127d5ab9a4b1054ebce279e7f54006eba",
+    "expected": "012aba4a1115e77fe193f414645de65127d5ab9a4b1054ebce279e7f54006eba",
+    "result": {
+      "status": "complete",
+      "bytes": 249924,
+      "elapsedMs": 140.80000001192093,
+      "maxSliceMs": 8
+    },
+    "frames": 3,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2409,
+      "width": 19,
+      "height": 27,
+      "elapsedMs": 3.300000011920929
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "06-night-sky",
+    "execution": "auto",
+    "hash": "012aba4a1115e77fe193f414645de65127d5ab9a4b1054ebce279e7f54006eba",
+    "expected": "012aba4a1115e77fe193f414645de65127d5ab9a4b1054ebce279e7f54006eba",
+    "result": {
+      "status": "complete",
+      "bytes": 249924,
+      "elapsedMs": 206.80000001192093,
+      "maxSliceMs": 8.100000023841858
+    },
+    "frames": 4,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2409,
+      "width": 19,
+      "height": 27,
+      "elapsedMs": 9.400000035762787
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "07-library-photo",
+    "execution": "main",
+    "hash": "cd5e9904922ab341f745f5f9bf6eb496c710fd3ed67b17d9bbbd602a6d253542",
+    "expected": "cd5e9904922ab341f745f5f9bf6eb496c710fd3ed67b17d9bbbd602a6d253542",
+    "result": {
+      "status": "complete",
+      "bytes": 597329,
+      "elapsedMs": 627.4000000357628,
+      "maxSliceMs": 8.400000035762787
+    },
+    "frames": 6,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1749,
+      "width": 19,
+      "height": 19,
+      "elapsedMs": 4.300000011920929
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "07-library-photo",
+    "execution": "auto",
+    "hash": "cd5e9904922ab341f745f5f9bf6eb496c710fd3ed67b17d9bbbd602a6d253542",
+    "expected": "cd5e9904922ab341f745f5f9bf6eb496c710fd3ed67b17d9bbbd602a6d253542",
+    "result": {
+      "status": "complete",
+      "bytes": 597329,
+      "elapsedMs": 698.1000000238419,
+      "maxSliceMs": 8.300000011920929
+    },
+    "frames": 7,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1749,
+      "width": 19,
+      "height": 19,
+      "elapsedMs": 13.400000035762787
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "08-portrait-photo",
+    "execution": "main",
+    "hash": "91d72dda6a639b931eef5a9dd6b6a51cccdec0613d4dd6d4ed6ae487407ded6b",
+    "expected": "91d72dda6a639b931eef5a9dd6b6a51cccdec0613d4dd6d4ed6ae487407ded6b",
+    "result": {
+      "status": "complete",
+      "bytes": 510842,
+      "elapsedMs": 939.1999999880791,
+      "maxSliceMs": 8.100000023841858
+    },
+    "frames": 8,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1789,
+      "width": 19,
+      "height": 19,
+      "elapsedMs": 4.899999976158142
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "08-portrait-photo",
+    "execution": "auto",
+    "hash": "91d72dda6a639b931eef5a9dd6b6a51cccdec0613d4dd6d4ed6ae487407ded6b",
+    "expected": "91d72dda6a639b931eef5a9dd6b6a51cccdec0613d4dd6d4ed6ae487407ded6b",
+    "result": {
+      "status": "complete",
+      "bytes": 510842,
+      "elapsedMs": 718.8999999761581,
+      "maxSliceMs": 8.100000023841858
+    },
+    "frames": 7,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1789,
+      "width": 19,
+      "height": 19,
+      "elapsedMs": 11
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "09-landscape-photo",
+    "execution": "main",
+    "hash": "963a2c0652e62f403057a4e2897c6a1ac3931304cab3e06ef9171e6aa44248ee",
+    "expected": "963a2c0652e62f403057a4e2897c6a1ac3931304cab3e06ef9171e6aa44248ee",
+    "result": {
+      "status": "complete",
+      "bytes": 293868,
+      "elapsedMs": 377.80000001192093,
+      "maxSliceMs": 8.100000023841858
+    },
+    "frames": 5,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 3078,
+      "width": 25,
+      "height": 25,
+      "elapsedMs": 4
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "09-landscape-photo",
+    "execution": "auto",
+    "hash": "963a2c0652e62f403057a4e2897c6a1ac3931304cab3e06ef9171e6aa44248ee",
+    "expected": "963a2c0652e62f403057a4e2897c6a1ac3931304cab3e06ef9171e6aa44248ee",
+    "result": {
+      "status": "complete",
+      "bytes": 293868,
+      "elapsedMs": 302.19999998807907,
+      "maxSliceMs": 8.5
+    },
+    "frames": 5,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 3078,
+      "width": 25,
+      "height": 25,
+      "elapsedMs": 11.100000023841858
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "10-transparent-board",
+    "execution": "main",
+    "hash": "421d6227d4675d1f98733bf41c7fa1b23c69de7ca92f54873547f59cfaf54f19",
+    "expected": "421d6227d4675d1f98733bf41c7fa1b23c69de7ca92f54873547f59cfaf54f19",
+    "result": {
+      "status": "complete",
+      "bytes": 531281,
+      "elapsedMs": 1512.199999988079,
+      "maxSliceMs": 8.199999988079071
+    },
+    "frames": 10,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2431,
+      "width": 20,
+      "height": 24,
+      "elapsedMs": 3.699999988079071
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "10-transparent-board",
+    "execution": "auto",
+    "hash": "421d6227d4675d1f98733bf41c7fa1b23c69de7ca92f54873547f59cfaf54f19",
+    "expected": "421d6227d4675d1f98733bf41c7fa1b23c69de7ca92f54873547f59cfaf54f19",
+    "result": {
+      "status": "complete",
+      "bytes": 531281,
+      "elapsedMs": 1131.8999999761581,
+      "maxSliceMs": 8.199999988079071
+    },
+    "frames": 10,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2431,
+      "width": 20,
+      "height": 24,
+      "elapsedMs": 12
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "11-transparent-icons",
+    "execution": "main",
+    "hash": "8e0cf4ed42700be8a7b80bf6e7b6426f7a6771a724710fbf913285f2057e177c",
+    "expected": "8e0cf4ed42700be8a7b80bf6e7b6426f7a6771a724710fbf913285f2057e177c",
+    "result": {
+      "status": "complete",
+      "bytes": 995157,
+      "elapsedMs": 1501.5,
+      "maxSliceMs": 8.600000023841858
+    },
+    "frames": 11,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2128,
+      "width": 24,
+      "height": 18,
+      "elapsedMs": 4.5
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "11-transparent-icons",
+    "execution": "auto",
+    "hash": "8e0cf4ed42700be8a7b80bf6e7b6426f7a6771a724710fbf913285f2057e177c",
+    "expected": "8e0cf4ed42700be8a7b80bf6e7b6426f7a6771a724710fbf913285f2057e177c",
+    "result": {
+      "status": "complete",
+      "bytes": 995157,
+      "elapsedMs": 993.5,
+      "maxSliceMs": 8.399999976158142
+    },
+    "frames": 9,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 2128,
+      "width": 24,
+      "height": 18,
+      "elapsedMs": 11.5
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "12-comic",
+    "execution": "main",
+    "hash": "45f38163e95e62475aaa95240fd436755018068b70aed2a40ae61105aee20591",
+    "expected": "45f38163e95e62475aaa95240fd436755018068b70aed2a40ae61105aee20591",
+    "result": {
+      "status": "complete",
+      "bytes": 1067542,
+      "elapsedMs": 1339.4000000357628,
+      "maxSliceMs": 8.100000023841858
+    },
+    "frames": 10,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1809,
+      "width": 16,
+      "height": 24,
+      "elapsedMs": 3.5
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  },
+  {
+    "id": "12-comic",
+    "execution": "auto",
+    "hash": "45f38163e95e62475aaa95240fd436755018068b70aed2a40ae61105aee20591",
+    "expected": "45f38163e95e62475aaa95240fd436755018068b70aed2a40ae61105aee20591",
+    "result": {
+      "status": "complete",
+      "bytes": 1067542,
+      "elapsedMs": 831.6999999880791,
+      "maxSliceMs": 8.199999988079071
+    },
+    "frames": 8,
+    "first": {
+      "stage": "frame",
+      "level": 0,
+      "plane": 255,
+      "final": false,
+      "bytes": 1809,
+      "width": 16,
+      "height": 24,
+      "elapsedMs": 10.899999976158142
+    },
+    "sampledMainHeapPeak": 10000000,
+    "memory": 10000000
+  }
+]

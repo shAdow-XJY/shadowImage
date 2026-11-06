@@ -1,0 +1,9 @@
+# SHP1 experimental predictive pyramid
+
+Run `node --test`. Serve the repository with `python -m http.server 8081`, then open `/experiments/`.
+
+This is an isolated research prototype; the existing demo remains unchanged. No dependencies, WASM, native progressive decoder, compression stream API or worker required. Browser demo uses modules, Canvas 2D, typed arrays, Blob URLs and a local file input. Actual browser/device compatibility and network streaming have not been verified.
+
+Header: ASCII SHP1, u16 big-endian width, u16 big-endian height. Maximum 4 million pixels. RGB8 only. Repeated ceil-halving determines dimensions until both dimensions are <=8. Emit levels smallest first. Encoder forms each parent sample by rounded averaging of existing 2x2 children. Each subsequent level stores signed differences from nearest-parent prediction, NOT independent images. Samples ordered row, column, RGB. Zigzag signed mapping followed by unsigned base-128 varint, maximum two bytes. Decoder retains previous level and adds residuals. Final RGB reconstruction is exact. EOF is valid only after final level; no trailing bytes allowed.
+
+This deliberately lacks entropy coding: expect larger files than raw RGB, and much larger files than JPEG on typical images. It tests dependency-based progressive reconstruction and small runtime feasibility, not compression competitiveness. Mean/nearest prediction is not a production wavelet codec. First tiny level being available does not prove recognizability. The demo scales inputs to at most 1024 pixels on the long side and composites transparency on white; losslessness applies only to those resulting RGB samples. Simulated delivery is not a real HTTP benchmark. Need real photo corpus, entropy coding, checksums, resource budgets, fetch cancellation, worker execution and browser profiling before production use.

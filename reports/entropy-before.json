@@ -1,0 +1,62 @@
+[
+  {
+    "id": "01-game-screenshot",
+    "bytes": 799538,
+    "firstBytes": 1774
+  },
+  {
+    "id": "02-text-card",
+    "bytes": 297250,
+    "firstBytes": 1620
+  },
+  {
+    "id": "03-line-art",
+    "bytes": 492417,
+    "firstBytes": 1570
+  },
+  {
+    "id": "04-transparent-interface",
+    "bytes": 793080,
+    "firstBytes": 2176
+  },
+  {
+    "id": "05-illustration",
+    "bytes": 521182,
+    "firstBytes": 2554
+  },
+  {
+    "id": "06-night-sky",
+    "bytes": 351896,
+    "firstBytes": 2409
+  },
+  {
+    "id": "07-library-photo",
+    "bytes": 879063,
+    "firstBytes": 1749
+  },
+  {
+    "id": "08-portrait-photo",
+    "bytes": 748304,
+    "firstBytes": 1789
+  },
+  {
+    "id": "09-landscape-photo",
+    "bytes": 413925,
+    "firstBytes": 3078
+  },
+  {
+    "id": "10-transparent-board",
+    "bytes": 948739,
+    "firstBytes": 2431
+  },
+  {
+    "id": "11-transparent-icons",
+    "bytes": 1569837,
+    "firstBytes": 2128
+  },
+  {
+    "id": "12-comic",
+    "bytes": 1511070,
+    "firstBytes": 1809
+  }
+]

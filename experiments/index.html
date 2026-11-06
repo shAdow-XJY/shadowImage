@@ -1,0 +1,18 @@
+<!doctype html><meta charset="utf-8"><title>Shadow predictive stream experiment</title>
+<style>body{font:16px system-ui;max-width:960px;margin:32px auto}canvas{max-width:100%;border:1px solid #888}pre{white-space:pre-wrap}</style>
+<h1>单码流渐进重建实验</h1><p>选择本地图片，离线编码后导出一个 .shp 文件。播放按 64 KiB/s 模拟分块到达，并非真实网络测速。最终恢复浏览器读取到的 RGB；透明区域合成白色。</p>
+<input id="file" type="file" accept="image/*"><button id="play" disabled>模拟流播放</button><a id="save">下载码流</a><p id="status"></p><canvas id="view"></canvas><pre id="log"></pre>
+<script type="module">
+import {encode,Decoder} from './codec.js';
+const $=id=>document.getElementById(id);let data,url;
+$('file').onchange=async()=>{const file=$('file').files[0];if(!file)return;$('play').disabled=true;try{
+ const img=new Image(),src=URL.createObjectURL(file);try{await new Promise((ok,no)=>{img.onload=ok;img.onerror=no;img.src=src;});}finally{URL.revokeObjectURL(src);}
+ const scale=Math.min(1,1024/Math.max(img.naturalWidth,img.naturalHeight)),w=Math.max(1,Math.round(img.naturalWidth*scale)),h=Math.max(1,Math.round(img.naturalHeight*scale));
+ const c=document.createElement('canvas');c.width=w;c.height=h;const ctx=c.getContext('2d');ctx.fillStyle='white';ctx.fillRect(0,0,w,h);ctx.drawImage(img,0,0,w,h);const rgba=ctx.getImageData(0,0,w,h).data,rgb=new Uint8Array(w*h*3);
+ for(let i=0;i<w*h;i++)rgb.set(rgba.subarray(i*4,i*4+3),i*3);
+ data=encode(rgb,w,h);$('view').width=w;$('view').height=h;if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(new Blob([data]));$('save').href=url;$('save').download='image.shp';$('status').textContent=`输入文件 ${file.size} 字节；RGB ${rgb.length} 字节；实验码流 ${data.length} 字节。不同编码质量，不直接比较压缩率。`;$('play').disabled=false;
+}catch(e){$('status').textContent=String(e);}};
+$('play').onclick=async()=>{$('play').disabled=true;$('file').disabled=true;$('log').textContent='';const start=performance.now(),off=document.createElement('canvas'),ctx=$('view').getContext('2d');
+ const decoder=new Decoder(e=>{off.width=e.width;off.height=e.height;const oc=off.getContext('2d'),im=oc.createImageData(e.width,e.height);for(let p=0;p<e.width*e.height;p++){im.data.set(e.rgb.subarray(p*3,p*3+3),p*4);im.data[p*4+3]=255;}oc.putImageData(im,0,0);ctx.drawImage(off,0,0,$('view').width,$('view').height);$('log').textContent+=`${Math.round(performance.now()-start)}ms: ${e.width}×${e.height}, 累计 ${e.bytes} 字节\n`;});
+ try{for(let p=0;p<data.length;p+=3276){await new Promise(r=>setTimeout(r,50));decoder.push(data.subarray(p,p+3276));}decoder.finish();}finally{$('play').disabled=false;$('file').disabled=false;}};
+</script>
