@@ -28,11 +28,13 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
     },
     "./encoder": {
       "types": "./dist/encoder.d.ts",
-      "import": "./dist/encoder.js"
+      "import": "./dist/encoder.js",
+      "require": "./dist/encoder.js"
     },
     "./worker": "./dist/player/worker.js"
   },
@@ -55,7 +57,7 @@
     "url": "https://github.com/shAdow-XJY/shadowImage/issues"
   },
   "engines": {
-    "node": ">=20"
+    "node": "^20.19.0 || >=22.12.0"
   },
   "types": "./dist/index.d.ts"
 }

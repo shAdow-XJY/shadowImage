@@ -59,3 +59,28 @@ test('version, malformed block, missing dependencies, and sticky failure', () =>
   const d=new ShadowImageDecoder(),bad=original.slice();bad[20]^=1;assert.throws(()=>d.push(bad));assert.throws(()=>d.push(original),/failed/);
   assert.throws(()=>new ShadowImageDecoder({maxBufferedBytes:10}),/limits/);
 });
+
+test('accepts Uint8Array chunks from another realm', async () => {
+  const { runInNewContext } = await import('node:vm');
+  const pixels = samples(3, 2, 4);
+  const encoded = encode(pixels, { width: 3, height: 2 });
+  const foreign = runInNewContext('Uint8Array.from(values)', { values: Array.from(encoded) });
+  assert.equal(foreign instanceof Uint8Array, false);
+  let final;
+  const decoder = new ShadowImageDecoder({ onFrame: frame => { final = frame; } });
+  decoder.push(foreign); decoder.finish();
+  assert.deepEqual(Array.from(final.rgba), Array.from(pixels));
+  assert.throws(() => new ShadowImageDecoder().push(new Uint16Array(4)), /Expected Uint8Array/);
+});
+
+test('validation without frame output checks complete streams and corrupt packets', () => {
+  const encoded = encode(samples(67, 65, 4), { width: 67, height: 65 });
+  const validator = new ShadowImageDecoder();
+  validator.push(encoded);
+  assert.equal(validator.finish().width, 67);
+  assert.equal(validator.lastFrameAt, -Infinity, 'no display reconstruction without a frame consumer');
+  const corrupt = encoded.slice(); corrupt[corrupt.length - 1] ^= 1;
+  assert.throws(() => new ShadowImageDecoder().push(corrupt));
+  const truncated = new ShadowImageDecoder(); truncated.push(encoded.subarray(0, -24));
+  assert.throws(() => truncated.finish(), /Incomplete/);
+});

@@ -4,7 +4,7 @@ import { verify } from './codec/format.js';
 
 /** Stateful bounded parser. Call push OR await pushAsync; never concurrently. */
 export class ShadowImageDecoder {
-  constructor({ onFrame = () => {}, onHeader = () => {}, maxPixels = 4_000_000, maxBufferedBytes = 65536, maxPacketBytes = 16384, frameIntervalMs = 0 } = {}) {
+  constructor({ onFrame, onHeader = () => {}, maxPixels = 4_000_000, maxBufferedBytes = 65536, maxPacketBytes = 16384, frameIntervalMs = 0 } = {}) {
     if (![maxPixels, maxBufferedBytes, maxPacketBytes].every(n => Number.isSafeInteger(n) && n > 0) || maxBufferedBytes < 24 || !Number.isFinite(frameIntervalMs) || frameIntervalMs < 0) throw Error('Invalid decoder limits');
     Object.assign(this, { onFrame, onHeader, maxPixels, maxBufferedBytes, maxPacketBytes, frameIntervalMs });
     this.buffer = new Uint8Array(24); this.used = 0; this.target = 24;
@@ -12,7 +12,7 @@ export class ShadowImageDecoder {
     this.done = false; this.failed = false; this.busy = false; this.maxSliceMs = 0;
   }
   *consume(chunk) {
-    if (!(chunk instanceof Uint8Array)) throw Error('Expected Uint8Array');
+    if (!ArrayBuffer.isView(chunk) || Object.prototype.toString.call(chunk) !== '[object Uint8Array]') throw Error('Expected Uint8Array');
     for (let p = 0; p < chunk.length;) {
       if (this.done) throw Error('Trailing stream bytes');
       const n = Math.min(chunk.length - p, this.target - this.used);
@@ -59,7 +59,7 @@ export class ShadowImageDecoder {
     this.offset += count;
     if (flags) {
       const final = level === this.levels.length - 1 && (!level || plane === this.bottom());
-      if (final || level === 0 || performance.now() - this.lastFrameAt >= this.frameIntervalMs) {
+      if (this.onFrame && (final || level === 0 || performance.now() - this.lastFrameAt >= this.frameIntervalMs)) {
         const frame = yield* reconstruct(this.coefficients, width, channels, this.levels, level);
         this.lastFrameAt = performance.now();
         this.onFrame({ ...frame, level, plane, final, bytes: this.bytes, targetWidth: width, targetHeight: this.header.height });

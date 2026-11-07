@@ -180,3 +180,9 @@ npm run demo
 ## 许可
 
 [Apache-2.0](LICENSE)。Release 附带的程序绘制示例随项目提供；真实测试图片未随仓库或 Release 分发，仍受各自原始许可约束。
+
+Decoder input accepts Uint8Array chunks from other JavaScript realms (for example iframe or embedded editor contexts). Wider typed arrays are rejected.
+
+When `onFrame` is omitted, decoding validates all packets, checksums, coefficient signs and dependencies without reconstructing display pixels. Supply `onFrame` for image output.
+
+CommonJS consumers use Node.js 20.19+ or 22.12+ synchronous ESM loading through the package require condition; the browser runtime remains ESM.
